@@ -38,38 +38,49 @@
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{frametitle continuation}{}
 
-\usepackage[defaultsans, scale=0.95]{opensans} % Use Open Sans as the default sans-serif font
-\usepackage[rm]{merriweather} % Use Merriweather as the default seriffed font
+%% Use Open Sans as the default sans-serif font
+\usepackage[defaultsans, scale=0.95]{opensans} 
 
+%% Use Merriweather as the default seriffed font
+\usepackage[rm]{merriweather} 
+
+%% Typeset titles in serif font
 \setbeamerfont{title}{family=\rmfamily}
 \setbeamerfont{frametitle}{family=\rmfamily}
 \setbeamerfont{framesubtitle}{family=\rmfamily}
 
-\usefonttheme[onlymath]{serif} % Typeset math in serif font
+%% Typeset math in serif font
+\usefonttheme[onlymath]{serif} 
 
-%% Define some usefull commands:
+%%%-Command Definitions------------------------------------------------------%%%
+
+%% Quick color changes:
 \newcommand{\red}[0]{\textcolor{red}}
 \newcommand{\violet}[0]{\textcolor{violet}}
 \newcommand{\green}[0]{\textcolor{green}}
 \newcommand{\blue}[0]{\textcolor{blue}}
 
+%% Hide text:
 \newcommand{\mask}[0]{\textcolor{white}}
 \newcommand{\comment}[1]{}
 
+%% Vertical spacing:
 \newcommand{\va}[0]{\vspace{12pt}}
 \newcommand{\vb}[0]{\vspace{6pt}}
 \newcommand{\vc}[0]{\vspace{3pt}}
 \newcommand{\vx}[1]{\vspace{#1pt}}
 
-% Insert a call-out slide to introduce a new section:
+%% Insert a call-out slide to introduce a new section:
 \newcommand{\sectionslide}[1]{%
-\begin{frame}{}%
+  \section{#1}
   
-  \begin{center}%
-    \huge{\textrm{\textsc{#1}}}%
-  \end{center}%
-  
-\end{frame}%
+  \begin{frame}{}%
+    
+    \begin{center}%
+      \huge{\textrm{\textsc{#1}}}%
+    \end{center}%
+    
+  \end{frame}%
 }
 
 \mode
